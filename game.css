@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+#game {
+    width: 1216px;
+    height: 700px;
+    border: 1px solid yellow;
+    position: absolute;
+    left: 300px;
+    top: 120px;
+    background-color: black;
+    overflow: hidden;
+}
+
+#scoreBox {
+    width: 1216px;
+    height: 30px;
+    position: absolute;
+    left: 300px;
+    top: 90px;
+    background-color: black;
+}
+
+#score {
+    color: gold;
+    font-family: Courier; 
+    font-size: 150%;
+    font-weight: bold;
+    position: absolute;
+    left: 1050px;
+}
+
+#header {
+    color: yellow;
+    -webkit-text-stroke: 1px green;
+    font-family: Courier; 
+    font-size: 250%;
+    font-weight: bold;
+    position: absolute;
+    left: 40px;
+    bottom: 10px;
+}
+
+#target {
+    color:gold;
+    font-family: Courier; 
+    font-size: 150%;
+    font-weight: bold;
+    position: absolute;
+    left: 900px;
+}
+
+#lostBalloonBox {
+    width: 62px;
+    height: 700px;
+    border: 1px solid yellow;
+    position: absolute;
+    left: 1530px;
+    top: 120px;
+    background-color: black;
+}
+
+#gun {
+    width: 30px;
+    height: 30px;
+    border-right: 5px solid yellow;
+    border-top: 5px solid yellow;
+    border-radius: 30%;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 20px;
+}
+
+.arrow {
+    width: 15px;
+    height: 3px;
+    background-color: yellow;
+    border-radius: 1.5px;
+    position: absolute;
+    left: 65px;
+}
+
+@keyframes arrow {
+    0% {left: 50px;}
+    100% {left: 1500px;}
+}
+
+@keyframes balloon {
+    0% {bottom: -100px;}
+    20% {bottom: 0px;}
+    40% {bottom: 200px;}
+    60% {bottom: 400px;}
+    80% {bottom: 600px;}
+    100% {bottom: 800px;}
+}
+
+.balloon {
+    height: 70px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    /* top: 50px; */
+    border: 1px solid blue;
+}
+
+.balloon::before {
+    content: "▲";
+    color: rgb(253, 196, 196);
+    position: absolute;
+    top: 65px;
+    left: 22px;
+    z-index: 10;
+}
+
+.balloon::after {
+    height: 50px;
+    width: 1px;
+    background-color: white;
+    position: absolute;
+    top: 75px;
+    left: 30px;
+    content: "";
+    z-index: 1;
+}
+
+#play-again {
+    color: red;
+    -webkit-text-stroke: 1px red;
+    position: absolute;
+    left: 480px;
+    top: 500px;
+    background-color: transparent;
+    font-family: Courier;
+    font-size: 150%;
+    border-radius: 30%;
+    z-index: 1000;
+    animation: shake 1s infinite;
+}
+
+#play-again:hover {
+    color: rgb(255, 133, 133);
+}
+
+@keyframes shake {
+    0%, 100% { left: 480px; }
+    20% { left: 475px; }
+    40% { left: 485px; }
+    60% { left: 475px; }
+    80% { left: 485px; }
+  }
+
+
